@@ -2,43 +2,52 @@
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 import Badge from '../components/Badge.astro'
+import SectionContainer from '../components/SectionContainer.astro'
 import LinkedIncon from '../icons/LinkedIncon.astro';
 import SocialPill from '../icons/SocialPill.astro';
 import GithubIcon from '../icons/GithubIcon.astro';
+import Briefcase from '../icons/Briefcase.astro';
 import Mail from '../icons/Mail.astro';
+import Experience from '../components/Experience.astro';
 ---
 
 <Layout title="Porfolio de Nicolás - Desarrollador y Programador Full Stack"
 description='Programado Full Stack '
 >
-	<main>
-		<section class="w-full lg:w-[740px] mx-auto py-44">
-			<img class="rounded-full w-12 h-12 mb-4" src="https://scontent.fscl20-1.fna.fbcdn.net/v/t1.18169-9/12794373_534196206740635_8041628625324393382_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=1d70fc&_nc_ohc=HnsMhJAVM2QQ7kNvgHGjqs0&_nc_ht=scontent.fscl20-1.fna&oh=00_AYCNG1PH4fV8eKAn7UQm-OqXInypirtc0U0wmSEXODnFiA&oe=66B65F84" alt="nicolas-foto">
-		<h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-10">Hey! Soy Nicolás <a href="https://www.linkedin.com/in/nicolas-guzman-dev" 
+	<main class="px-4">
+		<SectionContainer class="py-44 pb-24">
+			<img class="rounded-full size-12  mb-4" src="https://scontent.fscl20-1.fna.fbcdn.net/v/t1.18169-9/12794373_534196206740635_8041628625324393382_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=1d70fc&_nc_ohc=HnsMhJAVM2QQ7kNvgHGjqs0&_nc_ht=scontent.fscl20-1.fna&oh=00_AYCNG1PH4fV8eKAn7UQm-OqXInypirtc0U0wmSEXODnFiA&oe=66B65F84" alt="nicolas-foto">
+		<h1 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10">Hey! Soy Nicolás <a href="https://www.linkedin.com/in/nicolas-guzman-dev" 
 			target="_blank"
 			rel="noopener"
 			class="flex justity-center items-center"
 			> <div class="flex justify-center items-center"><Badge>Disponible para trabajar</Badge></div></a>
 		</h1>
-		<h2 class="text-2xl  text-wrap"><span class="text-yellow-200/90 ">Full Stack Developer</span>. <span class="text-red-200/90">De Chile</span> . <span class="opacity-75"> Enfocado en ofrecer soluciones eficientes</span></h2>
-		<nav class="flex gap-x-4 mt-8">
+		<h2 class="lg:text-2xl text-xl  text-wrap max-w[700px]"><span class="text-yellow-200/90 ">Full Stack Developer</span>. <span class="text-red-200/90">De Chile</span> . <span class="opacity-75"> Enfocado en ofrecer soluciones eficientes</span></h2>
+		<nav class="flex gap-4 mt-8 flex-wrap">
 				<SocialPill href="https://www.linkedin.com/in/nicolas-guzman-dev">
-					<LinkedIncon class="w-6 h-6"/>
+					<LinkedIncon class="size-6"/>
 					LinkedIn
 				</SocialPill>
 				<SocialPill href="https://github.com/nguzm4n">
-					<GithubIcon class="w-6 h-6"/>
+					<GithubIcon class="size-6"/>
 					Github
 				</SocialPill>
-				<SocialPill href="https://github.com/nguzm4n">
-					<Mail class="w-6 h-6"/>
+				<SocialPill href="mailto:nguzmanespinoza1@gmail.com">
+					<Mail class="size-6"/>
 					nguzmanespinoza1@gmail.com
 				</SocialPill>
-				
+				</SectionContainer>
 				
 					
 			</nav>
-	</section>
+		</SectionContainer>
+	<SectionContainer>
+		<h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
+			<Briefcase class="size-7 "/>
+			Experiencia</h2>
+		<Experience />
+	</SectionContainer>
 	</main>
 </Layout>
 

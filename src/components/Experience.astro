@@ -1,0 +1,31 @@
+---
+import type { ActionError } from "astro:actions"
+import ExperienceItem from "./ExperienceItem.astro"
+
+const EXPERIENCE = [
+    {
+        date: "Actualmente...",
+    title: "",
+    company: "",
+    description:
+      "",
+    link: "",
+    },
+    {
+        date: "Noviembre 2023",
+    title: "Desarrollo Web",
+    company: "Chile",
+    description:
+      "The beginning of my journey",
+    }
+]
+---
+<ol class="relative border-s border-gray-200 ml-3">       
+    {EXPERIENCE.map(experience => (
+        <li class="mb-10 ms-4">
+            <ExperienceItem {...experience }/>
+        </li>
+    ))}           
+    
+</ol>
+
